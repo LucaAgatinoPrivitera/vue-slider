@@ -43,6 +43,7 @@ createApp({
             // indice = indice; Da chiedere
             // if (indice = 0){
             this.activeImage--;
+            console.log(indice);
             // }
 
         },
