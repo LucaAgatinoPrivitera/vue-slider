@@ -29,38 +29,32 @@
                     </div>
                 </div> -->
 
+                <!-- Milestone 1 -->
                 <div v-for="imageSingola, i in slides" class="item" :class="checkImageVisibility(i)">
+                    <!-- Per ogni elemento dell'array slides, vengono create le variabili ImageSingola e i (questo rappresenta l'indice del contatore essendo dichiarato come seconda variabile), tutto questo per ogni elemento, dopo aggiunge la classe item. Infine fa un check, nel caso l'immagine ha l'indice = ad activeImage, il risultato sarà active e visualizzabile -->
                     <img :src="slides[i].image" alt="">
+                    <!-- :src perché si lavora ad un attributo -->
                     <div class="text">
-                        <h2 :src="slides.title"></h2>
-                        <p :src="slides.text"></p>
+                        <h2>{{slides[i].title}}</h2>
+                        <p>{{slides[i].text}}></p>
+                        <!-- {{}} perché si lavora al contenuto dell'elemento, come innerHTML -->
                     </div>
                 </div>
 
 
 
-                <!-- <div class="thumbs">
+                <div class="thumbs">
                     <div class="prev"></div>
                     <div class="next"></div>
-                    <div class="thumb active">
-                        <img :src="percorsoImmagine" alt="Svezia" />
+                    <!-- Stesso lavoro che si trova sopra -->
+                    <div v-for="imageSingola, i in slides" class="thumb" :class="checkImageVisibility(i)">
+                        <img :src="slides[i].image" alt="">
                     </div>
-                    <div class="thumb">
-                        <img :src="percorsoImmagine" alt="Ratchet & Clank" />
-                    </div>
-                    <div class="thumb">
-                        <img :src="percorsoImmagine" alt="Fortnite" />
-                    </div>
-                    <div class="thumb">
-                        <img :src="percorsoImmagine" alt="Stray" />
-                    </div>
-                    <div class="thumb">
-                        <img :src="percorsoImmagine" alt="Avengers" />
-                    </div>
-                </div> -->
-
+                </div>
             </div>
+
         </div>
+    </div>
 
     </div>
 
