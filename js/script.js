@@ -1,6 +1,7 @@
+// Dichiaro l'array di oggetti
 const slides = [
-{
-    image: 'img/01.webp',
+    {
+        image: 'img/01.webp',
         title: 'Marvel\'s Spiderman Miles Morale',
         text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
     }, {
@@ -22,4 +23,21 @@ const slides = [
     }
 ];
 
-console.log(slides);
+// Creo l'app
+const { createApp } = Vue
+
+createApp({
+    data() {
+        return {
+            // Output ha l'array e la variabile che indica che l'immagine attiva deve avere come indice 0
+            slides,
+            activeImage: 0,
+        }
+    },
+
+    methods: {
+        checkImageVisibility(indice) {
+            return (indice == this.activeImage) ? 'active' : '';
+        },
+    }
+}).mount('.slider-wrapper')
