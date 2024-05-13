@@ -17,3 +17,6 @@ BONUS
 Al click su una thumb, visualizzare in grande l'immagine corrispondente
 Applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente
 Quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce
+
+Da chiedere: indice perché non viene preso?
+    Un po' tutto perché ho capito davvero poco, tipo setInterval

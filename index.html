@@ -44,8 +44,8 @@
 
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="back(i)"></div>
+                    <div class="next" @click="next()"></div>
                     <!-- Stesso lavoro che si trova sopra -->
                     <div v-for="imageSingola, i in slides" class="thumb" :class="checkImageVisibility(i)">
                         <img :src="slides[i].image" alt="">

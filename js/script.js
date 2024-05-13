@@ -39,5 +39,15 @@ createApp({
         checkImageVisibility(indice) {
             return (indice == this.activeImage) ? 'active' : '';
         },
+        back(indice) {
+            // indice = indice; Da chiedere
+            // if (indice = 0){
+            this.activeImage--;
+            // }
+
+        },
+        next() {
+            this.activeImage++;
+        },
     }
 }).mount('.slider-wrapper')
