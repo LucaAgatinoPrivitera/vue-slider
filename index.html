@@ -35,7 +35,7 @@
                     <img :src="slides[i].image" alt="">
                     <!-- :src perché si lavora ad un attributo -->
                     <div class="text">
-                        <h2>{{slides[i].title}}</h2>
+                        <h2 :class="counter(i)">{{slides[i].title}}</h2>
                         <p>{{slides[i].text}}></p>
                         <!-- {{}} perché si lavora al contenuto dell'elemento, come innerHTML -->
                     </div>
@@ -44,7 +44,7 @@
 
 
                 <div class="thumbs">
-                    <div class="prev" @click="back(i)"></div>
+                    <div class="prev" @click="back()"></div>
                     <div class="next" @click="next()"></div>
                     <!-- Stesso lavoro che si trova sopra -->
                     <div v-for="imageSingola, i in slides" class="thumb" :class="checkImageVisibility(i)">
