@@ -62,8 +62,8 @@ createApp({
                 this.activeImage = 0;
             }
         },
-        counter(i) {
-            return i;
+        showSlide(indice){
+            this.activeImage = indice; //imposta l'activeImage all'indice, nell html è gestito al click
         }
     }
 
